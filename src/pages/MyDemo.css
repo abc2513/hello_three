@@ -1,0 +1,57 @@
+#demo {
+    height: 95vh;
+    width: 100%;
+    display: flex;
+}
+#container {
+    position: relative; /* 作为子元素的相对定位元素 */
+    flex: 0 0 60%;
+    overflow: hidden;
+}
+.object-info{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+#labels {
+    position: absolute; /* 把Label定位在容器内 */
+    left: 0; /* 默认定位在左上角 */
+    top: 0;
+    color: white;
+    width: 5rem;
+}
+#labels>div {
+    font-family: sans-serif;
+    position: absolute;  /* 让我们的容器决定尺寸 */
+    left: 0;             /* 默认定位在左上角 */
+    top: 0;
+    cursor: pointer;     /* 当悬浮时，变为一个小手 */
+    font-size: large;
+    user-select: none;   /* 不允许文字被选中 */
+    background-color: rgba(182, 203, 214, 0.679);
+    padding: 4px;
+    border-radius: 3px;
+    transition: all .4s;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    width: 3em;
+    text-align: center;
+  }
+  #labels>div:hover {
+    /* color: rgb(0, 0, 74); */
+    transform: translate(-50%, -50%) scale(1.1);
+    text-shadow:         /* 创造一个黑色阴影 */
+      -1px -1px 0 rgba(0, 119, 255,0.3),
+      0   -1px 0 rgba(0, 119, 255,0.3),
+      1px -1px 0 rgba(0, 119, 255,0.3),
+      1px  0   0 rgba(0, 119, 255,0.3),
+      1px  1px 0 rgba(0, 119, 255,0.3),
+      0    1px 0 rgba(0, 119, 255,0.3),
+      -1px  1px 0 rgba(0, 119, 255,0.3),
+      -1px  0   0 rgba(0, 119, 255,0.3);
+  }
+canvas {
+    height: 100% !important;
+    width: 100% !important;
+}
